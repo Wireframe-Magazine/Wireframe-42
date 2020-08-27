@@ -1,0 +1,141 @@
+title Dungeons Of Nabokos
+author The Wireframe Readership
+noundo
+
+
+========
+OBJECTS
+========
+
+Background
+gray
+
+
+Chasm
+darkred black
+01010
+10101
+01010
+10101
+01010
+
+
+Wall
+darkgray
+
+Player
+darkbrown pink yellow
+.000.
+2010.
+10001
+2000.
+00000
+
+Bridge
+darkbrown brown
+00000
+01110
+01110
+01110
+00000
+
+Exit
+yellow red black
+00000
+01110
+01210
+01110
+00000
+
+
+=======
+LEGEND
+=======
+
+. = Background
+# = Wall
+P = Player
+* = Bridge
+C = Chasm
+e = Exit
+
+
+=======
+SOUNDS
+=======
+
+endlevel 50402709
+Player move 11122106
+Player cantmove 60711104
+Player action 95877703
+
+================
+COLLISIONLAYERS
+================
+
+Background
+Exit
+Player, Wall, Bridge, Chasm
+
+======
+RULES
+======
+
+[ >  Player | Bridge ] -> [  >  Player | > Bridge  ]
+
+[ > Bridge | Chasm ] -> [ | ]
+
+
+==============
+WINCONDITIONS
+==============
+
+All Player on Exit
+
+=======
+LEVELS
+=======
+
+message Move the bridges onto the void! (an unexpected, obviously incorporeal voice says)
+
+message Also, your wand seems to be malfunctioning here. You'll probably have to use your physical body. 
+
+#######
+#P....#
+#..*..#
+#CCCCC#
+#..#..#
+#.*#..#
+#.C.C.#
+###E###
+
+message Catch a breath... (the voice adds)
+
+#######
+.....P.
+.......
+E......
+#######
+
+message ... (the voice seems to have gone silent. Or away)
+
+###########################
+...C....CC...CCC...........
+E..###...C.*..CCC..*.....*.
+...###...C.....CCC...*.*..P
+...C....CC......CCC........
+###########################
+
+message Ah! You are a good one! (the voice notes in a rather bored tone)
+
+#######
+#....C#
+#C*P..#
+#C..*.#
+#.**CC#
+#..C#CE
+####### 
+
+message Congrats! (the voice says, and you can feel it fly away)
+
+message ~ The End ~
